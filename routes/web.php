@@ -14,7 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 
+/* task1 */
 
+Route::get('test', function () {
+    return 'Hello World';
+});
+
+Route::get('/products', function () {
+    return view('products.index');
+});
+
+Route::get('user/{id}', function ($id) {
+    return 'User '.$id;
+});
+
+Route::get('user/{id?}', function ($id) {
+    return 'User '.$id;
+});
+
+/* task1 end */
 
 Route::get('/products', function () {
     return view('products.index');
