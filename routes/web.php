@@ -24,19 +24,30 @@ Route::get('/products', function () {
     return view('products.index');
 });
 
-Route::get('user/{id}', function ($id) {
-    return 'User '.$id;
+Route::get('people/{id}', function ($id) {
+    return 'People '.$id;
 });
 
-Route::get('user/{id?}', function ($id) {
-    return 'User '.$id;
+Route::get('people/{id?}', function ($id) {
+    return 'People '.$id;
 });
 
 /* task1 end */
+/* task 2*/
+Route::get('/', 'MainPageController@index');
+
+Route::get('user/', 'MainPageController@userShow');
+
+Route::get('/about', function () {
+    App::setLocale('ru');
+    return view('main.about');
+});
+/* task 2 end */
 
 Route::get('/products', function () {
     return view('products.index');
 });
 
-Route::get('/', 'ProductController@index');
-Route::get('/{id}', 'ProductController@index');
+
+////Route::get('/', 'ProductController@index');
+//Route::get('/{id}', 'ProductController@index');
