@@ -33,6 +33,7 @@ Route::get('people/{id?}', function ($id) {
 });
 
 /* task1 end */
+
 /* task 2*/
 Route::get('/', 'MainPageController@index');
 
@@ -44,6 +45,11 @@ Route::get('/about', function () {
 });
 /* task 2 end */
 
+/* task 3*/
+
+Route::get('/factory', 'FactoryInit@index');
+
+/* task 3*/
 Route::get('/products', function () {
     return view('products.index');
 });

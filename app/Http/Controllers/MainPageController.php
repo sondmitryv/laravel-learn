@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class MainPageController extends Controller
 {
 
@@ -36,7 +37,7 @@ class MainPageController extends Controller
                 'position' => 'CEO at ATB'
             ],
         ];
-
+       
         return view('main.user', compact('users'));
     }
 }
